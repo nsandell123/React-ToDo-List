@@ -1,11 +1,8 @@
-import { useState } from "react";
-const List = () => {
+const List = (props) => {
     
-    //const [expenses, setExpenses] = useState([]);
-    const expenses = [];
-    expenses.push('bob');
+    
     return (
-    <div>{expenses.map((expense) => <h1>{expense}</h1>)}</div>
+    <div>{props.items.length === 0 ? <h1>No Expenses Found</h1> : props.items.map((item) => <h1>{item}</h1>)}</div>
     );
 };
 
